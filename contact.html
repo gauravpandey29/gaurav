@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Solar System-Introduction</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+
+            background: #FDF5DF;
+            background-size: 1024px 720px;
+        }
+
+        .top {
+            margin-left: 250px;
+            border-radius: 5px;
+            font-family: lato;
+            padding: 10px;
+            margin-top: 18px;
+            text-decoration: none;
+            font-weight: 900;
+
+            float: right;
+            text-decoration: none;
+        }
+
+        .slast {
+            font-family: lato;
+            color: white;
+            font-weight: 100;
+            display: inline-block;
+            background: linear-gradient(45deg, #e7cd58, #ff72cb);
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            margin-left: 690px;
+            margin-bottom: 12px;
+        }
+
+        .hp {
+
+            display: inline-block;
+            background: linear-gradient(45deg, #87adfe, #ff77cd);
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .toop {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            font-weight: 900;
+            margin-right: 600px;
+
+        }
+
+        #r {
+            text-decoration: none;
+        }
+
+        .c {
+
+            font-family: cursive;
+            font-size: 25px;
+            color: #36a9b1;
+            ;
+
+        }
+
+        .arrow {
+            width: 60px;
+            float: right;
+            margin-top: -595px;
+            margin-right: 20px;
+        }
+
+        .form {
+            background-color: white;
+            width: 500px;
+            height: 520px;
+            border-radius: 20px;
+
+            margin-top: 75px;
+            margin-left: 250px;
+            margin-right: 300px;
+        }
+
+        .box {
+            background-color: rgba(128, 128, 128, 0.096);
+            padding: 40px;
+        }
+
+        .contactform {
+            font-family: 'Lobster', cursive;
+            ;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 4px;
+
+        }
+
+        .maroon {
+            color: rgb(70, 0, 161);
+        }
+
+        .email {
+            color: rgb(37, 75, 0);
+        }
+
+        .message {
+            font-family: 'Lobster', cursive;
+            ;
+            font-weight: 700;
+            font-size: 20px;
+
+            margin-bottom: 7px;
+            color: rgb(75, 71, 71);
+        }
+
+        .submit {
+            font-size: 28px;
+            font-family: monospace;
+            font-weight: 700;
+            color: rgba(36, 115, 146, 0.973);
+
+            background-color: rgba(128, 128, 128, 0.336);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- a href tags  -->
+    <br>
+    <h3 class="top">
+        <a id="r" href="solar.html" style="color:black">ABOUT</a>&nbsp;&nbsp;
+        <a id="r" href="gallery.html" style="color:black"> GALLERY</a>&nbsp;&nbsp;
+        <a id="r" href="codes.html" style="color:black"> TAGS </a>&nbsp;&nbsp;
+        <a id="r" href="contact.html" class="hp" style="color:black"> CONTACT</a>&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <a href="index.html" class="hp" style="color: black">
+
+            HOME PAGE
+        </a> &nbsp;&nbsp;
+        <!-- this much is compulsory for every page -->
+        <br>
+        <br>
+        <br>
+        <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+            <form align="center" class="form">
+                <h1 style="font-family: monospace;margin-top:110px; font-size: 40px;color: rgb(0, 0, 0);">Contact Us
+                </h1>
+                <div class="box">
+                    <input type="text" id="firstName" placeholder="First Name" class="contactform maroon"><br>
+                    <input type="text" placeholder="Last Name" class="contactform maroon"><br>
+                    <input id="email" type="email" placeholder="Your Email" class="contactform email"> <br>
+                    <textarea name="feedback" rows="5" placeholder="Message..." class="message"></textarea>
+                    <br>
+                    
+                        <button type="button" id="submit"  value="submit" onclick="validateForm()" class="submit">Submit</button>
+                        <a href="thankyou.html" target="blank">
+                    </a>
+                </div>
+            </form>
+
+        </h2>
+        <br>
+
+
+        <a href="index.html">
+            <img src="images/next-arrow.png" class="arrow">
+        </a>
+    </h3>
+    <script>
+        function validateForm(){
+            let valid = true;
+            let firstName = document.getElementById('firstName').value;
+            let email = document.getElementById('email').value;
+
+            if(firstName === ""){
+                valid = false;
+            }
+            const emailRegex = /\S+@\S+\.\S+/;
+            if(!emailRegex.test(email)){
+                valid = false;
+            }
+            if(valid){
+                window.open("thankyou.html","_blank");    
+            }
+            
+
+        }
+    </script>
+</body>
+
+</html>
